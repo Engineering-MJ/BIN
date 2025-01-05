@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Bin System</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Smart Bin System</h1>
+    </header>
+    <main>
+        <button type="button" onclick="init()">Start</button>
+        <button type="button" onclick="startWebcam()">Open Webcam</button>
+        <button type="button" onclick="captureImage()">Capture Photo</button>
+        <select id="camera-select"></select>
+        <input type="file" id="image-input" onchange="handleImageUpload(event)" />
+
+        <div id="video-container">
+            <video id="webcam" autoplay playsinline></video>
+        </div>
+        <div id="image-container"></div>
+        <div id="label-container"></div>
+        <div id="feedback"></div>
+
+        <!-- Leaderboard Section -->
+        <h2>Leaderboard</h2>
+        <ul id="leaderboard"></ul>
+    </main>
+    <script src="script.js"></script>
+    <!-- <script type="text/javascript">
+       
+
+    </script> -->
+</body>
+
+</html>
